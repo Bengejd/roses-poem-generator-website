@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<img class="logo" src="assets/devCafe_logo.svg">
+
+<div style="text-align:center">
+  <div class="container" id="container"
+       [class.nsfw]="toggle == 'nsfw'"
+       [class.sfw]="toggle == 'sfw'"
+       *ngIf="selected !== null">
+    <h2 *ngFor="let s of selected">{{s | uppercase}}</h2>
+  </div>
+</div>
+
+<div class="footer">
+  <button (click)="toggleList('sfw')" [disabled]="toggle == 'sfw'">SFW</button>
+  <button (click)="toggleList('nsfw')" [disabled]="toggle == 'nsfw'" >NSFW</button>
+</div>
+
