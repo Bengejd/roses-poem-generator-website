@@ -895,9 +895,7 @@ export class AppComponent implements OnInit {
   }
 
   public getInterval() {
-    if (this.selected == null) {
-      return 10000;
-    }
+    if (this.selected == null) return 10000;
     return ((Object.keys(this.selected).length) * 3000) + 2650;
   }
 
